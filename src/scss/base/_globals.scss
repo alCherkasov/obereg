@@ -1,0 +1,17 @@
+* {
+	transition: var(--transition);
+}
+
+body {
+	min-height: 100vh;
+	overflow-x: hidden;
+
+	font-family: var(--font-main);
+	font-weight: var(--font-weight-main);
+	font-size: var(--font-size-sm);
+	color: var(--color-black);
+}
+
+a {
+	color: inherit;
+}
