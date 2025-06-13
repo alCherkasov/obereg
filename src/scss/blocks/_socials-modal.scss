@@ -1,0 +1,28 @@
+.socials-modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1001;
+
+	display: none;
+	// width: 100vw;
+	// height: 100vh;
+
+	// background-color: rgba(0, 0, 0, 0.15);
+
+	&--open {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.socials-modal__content {
+	max-width: 480px;
+	max-height: 480px;
+	padding: var(--spacing-sm);
+
+	border-radius: var(--border-rad-md);
+	background-color: var(--color-light-gray);
+}

@@ -1,8 +1,14 @@
 @use './../base/mixins' as *;
 
 .header {
+	margin-bottom: 80px;
+
 	font-family: var(--font-accent);
 	font-weight: var(--font-weight-accent);
+
+	@include mobile {
+		margin-bottom: var(--spacing-md);
+	}
 }
 
 .header__inner {
@@ -11,11 +17,19 @@
 	justify-content: space-between;
 	gap: 64px;
 	padding: 11px 0;
+
+	@include tablet {
+		gap: 32px;
+	}
 }
 
 .header__logo {
 	font-size: var(--font-size-xl);
 	font-weight: 700;
+
+	@include tablet {
+		font-size: var(--font-size-lg);
+	}
 
 	@include mobile {
 		font-size: var(--font-size-lg);
@@ -25,7 +39,7 @@
 .header__nav {
 	margin-left: auto;
 
-	@include tablet {
+	@include mobile {
 		position: fixed;
 		top: 0;
 		right: 0;
@@ -53,6 +67,10 @@
 	gap: 12px;
 
 	@include tablet {
+		gap: 6px;
+	}
+
+	@include mobile {
 		flex-direction: column;
 		align-items: flex-start;
 		gap: var(--spacing-sm);
@@ -68,7 +86,7 @@
 		border-radius: 2px;
 	}
 
-	@include tablet {
+	@include mobile {
 		font-size: var(--font-size-md);
 	}
 }
@@ -78,6 +96,10 @@
 	text-decoration: underline;
 
 	@include tablet {
+		font-size: 20px;
+	}
+
+	@include mobile {
 		display: none;
 	}
 }
@@ -85,7 +107,7 @@
 .header__controls {
 	display: none;
 
-	@include tablet {
+	@include mobile {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;

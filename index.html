@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 	<head>
 		<meta charset="UTF-8" />
 		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
@@ -36,17 +36,71 @@
 					<nav class="header__controls">
 						<a href="tel:+79182031229" class="phone-button">
 							<img
-								src="./public/icons/Vector.svg"
+								src="./public/icons/phone-icon.svg"
 								alt="Кнопка: позвонить нам"
 							/>
 						</a>
-						<button class="burger" id="burger">
+						<button
+							class="burger"
+							id="burger"
+							aria-label="Кнопка: открыть меню"
+						>
 							<div class="burger__line"></div>
 						</button>
 					</nav>
 				</div>
 			</div>
 		</header>
-		<div id="app"></div>
+		<main class="main">
+			<section class="hero">
+				<div class="container">
+					<div class="hero__inner">
+						<div class="hero__text-content">
+							<h1 class="hero__title title">
+								Модульные<br />
+								и каркасные<br />
+								дома под ключ
+							</h1>
+							<p class="hero__description">
+								Модульные и каркасные дома<br />
+								с индивидуальной планировкой<br />
+								и <b>монтажом от 60 дней</b>
+							</p>
+							<button class="hero__button button" id="hero-button">
+								<span class="visually-hidden">Кнопка: написать нам</span>
+								Написать нам
+							</button>
+						</div>
+						<picture class="hero__img" width="580" height="480">
+							<source
+								srcset="
+									./public/img/hero/hero.webp    1x,
+									./public/img/hero/hero@2x.webp 2x
+								"
+								type="image/webp"
+							/>
+							<source
+								srcset="
+									./public/img/hero/hero.jpg    1x,
+									./public/img/hero/hero@2x.jpg 2x
+								"
+								type="image/webp"
+							/>
+							<img
+								src="./public/img/hero/hero.jpg"
+								alt="Каркасный дом"
+								loading="lazy"
+							/>
+						</picture>
+					</div>
+				</div>
+			</section>
+		</main>
+		<div class="socials-modal" id="socials-modal">
+			<div class="socials-modal__content">
+				<a href="" class="button button--whatsapp">Whatsapp</a>
+				<a href="" class="button button--telegram">Telegram</a>
+			</div>
+		</div>
 	</body>
 </html>

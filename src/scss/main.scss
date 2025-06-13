@@ -5,6 +5,9 @@
 @use './base/mixins';
 @use './base/utils';
 
+@use './blocks/button';
 @use './blocks/burger-button';
 @use './blocks/phone-button';
 @use './blocks/header';
+@use './blocks/hero';
+@use './blocks/socials-modal';

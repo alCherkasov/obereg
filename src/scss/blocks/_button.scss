@@ -1,0 +1,45 @@
+@use './../base/mixins' as *;
+
+.button {
+	display: inline-block;
+	padding: var(--spacing-sm);
+
+	font-family: var(--font-accent);
+	font-size: var(--font-size-sm);
+	font-weight: var(--font-weight-accent);
+	color: var(--color-white);
+
+	border-radius: var(--border-rad-sm);
+	background-color: var(--color-black);
+
+	&:hover {
+		background-color: var(--color-black-hover);
+	}
+
+	&:active {
+		background-color: var(--color-black-active);
+	}
+
+	&:focus-visible {
+		background-color: var(--color-black-hover);
+	}
+
+	&--whatsapp {
+		background-color: #2cb742;
+
+		&:hover {
+			background-color: #29ab3d;
+		}
+	}
+	&--telegram {
+		background-color: #27a7e7;
+
+		&:hover {
+			background-color: #259dd8;
+		}
+	}
+
+	// @include mobile {
+	// 	padding: var(--spacing-xs);
+	// }
+}
