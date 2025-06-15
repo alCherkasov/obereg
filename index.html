@@ -5,26 +5,28 @@
 		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./src/scss/main.scss" />
-		<title>Vite + TS</title>
+		<title>
+			Строительство каркасных домов под ключ Краснодарский и Ставропольский край
+		</title>
 	</head>
 	<body>
 		<header class="header">
 			<div class="container">
 				<div class="header__inner">
-					<a href="/" class="header__logo"> Оберег </a>
+					<a href="#hero" class="header__logo"> Оберег </a>
 					<nav class="header__nav">
 						<ul class="header__nav-list">
 							<li class="header__nav-item">
-								<a href="" class="header__nav-link">Преимущества</a>
+								<a href="#benefits" class="header__nav-link">Преимущества</a>
 							</li>
 							<li class="header__nav-item">
-								<a href="" class="header__nav-link">Этапы работы</a>
+								<a href="#process" class="header__nav-link">Этапы работы</a>
 							</li>
 							<li class="header__nav-item">
-								<a href="" class="header__nav-link">Фотографии</a>
+								<a href="#gallery" class="header__nav-link">Фотографии</a>
 							</li>
 							<li class="header__nav-item">
-								<a href="" class="header__nav-link">Контакты</a>
+								<a href="#contacts" class="header__nav-link">Контакты</a>
 							</li>
 						</ul>
 					</nav>
@@ -51,7 +53,7 @@
 			</div>
 		</header>
 		<main class="main">
-			<section class="hero">
+			<section id="hero" class="hero">
 				<div class="container">
 					<div class="hero__inner">
 						<div class="hero__text-content">
@@ -88,7 +90,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="products">
+			<section id="products" class="products">
 				<div class="container">
 					<div class="products__inner">
 						<h2 class="title section-title">Мы строим</h2>
@@ -315,7 +317,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="benefits">
+			<section id="benefits" class="benefits">
 				<div class="container">
 					<div class="benefits__inner">
 						<h2 class="benefits__title title">
@@ -354,6 +356,76 @@
 							alt=""
 							class="benefits__img"
 						/>
+					</div>
+				</div>
+			</section>
+			<section id="process" class="process">
+				<div class="container">
+					<div class="process__inner">
+						<div class="process__title-block">
+							<h2 class="process__title section-title title">
+								Как мы работаем?
+							</h2>
+							<p class="process__subtitle">
+								Ваш новый дом всего за 4 шага — мы берём всё на себя
+							</p>
+						</div>
+						<div class="process__first-step">
+							<header class="process__step-header">
+								<h3 class="title">Заявка<br />и&nbsp;консультация</h3>
+								<p>01</p>
+							</header>
+							<div class="process__step-body">
+								<p>
+									Вы оставляете заявку — мы связываемся, уточняем ваши задачи и
+									подбираем подходящее решение
+								</p>
+							</div>
+							<button class="process__step-button button">
+								<span class="visually-hidden">Написать нам</span>
+								Написать нам
+							</button>
+						</div>
+						<div class="process__second-step">
+							<header class="process__step-header">
+								<h3 class="title">Проект<br />и&nbsp;согласование</h3>
+								<p>02</p>
+							</header>
+							<div class="process__step-body">
+								<p>
+									Создаём планировку, подбираем комплектацию и материалы.
+									Учитываем все пожелания и бюджет
+								</p>
+							</div>
+							<img src="/img/process/Triangular-ruler.png" alt="" />
+						</div>
+						<div class="process__third-step">
+							<header class="process__step-header">
+								<h3 class="title">Строительство<br />на&nbsp;участке</h3>
+								<p>03</p>
+							</header>
+							<div class="process__step-body">
+								<p>
+									Возводим дом на вашем участке: собираем каркас, утепляем,
+									выполняем внешнюю и внутреннюю отделку. Строго по срокам и
+									технологии
+								</p>
+							</div>
+							<img src="/img/process/Building-construction.png" alt="" />
+						</div>
+						<div class="process__fourth-step">
+							<header class="process__step-header">
+								<h3 class="title">Сдача объекта<br />и&nbsp;передача ключей</h3>
+								<p>04</p>
+							</header>
+							<div class="process__step-body">
+								<p>
+									Проверяем результат, передаём дом и все документы. Вы
+									заезжаете или запускаете бизнес — всё готово!
+								</p>
+								<img src="/img/process/House-with-garden.png" alt="" />
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>

@@ -1,5 +1,9 @@
 @use './../base/mixins' as *;
 
+.hero {
+	padding-top: 40px;
+}
+
 .hero__inner {
 	display: flex;
 	justify-content: space-between;

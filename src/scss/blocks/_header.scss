@@ -1,8 +1,24 @@
 @use './../base/mixins' as *;
 
 .header {
+	position: fixed;
+	z-index: 1500;
+
+	width: 100vw;
+	padding: 11px 0;
+
 	font-family: var(--font-accent);
 	font-weight: var(--font-weight-accent);
+
+	background-color: var(--color-white);
+
+	@include mobile {
+		border-radius: 0 0 10px 10px;
+	}
+
+	&--shadow {
+		box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+	}
 }
 
 .header__inner {
@@ -10,7 +26,6 @@
 	align-items: center;
 	justify-content: space-between;
 	gap: 64px;
-	padding: 11px 0;
 
 	@include tablet {
 		gap: 32px;
@@ -26,6 +41,10 @@
 	}
 
 	@include mobile {
+		font-size: var(--font-size-lg);
+	}
+
+	&--small {
 		font-size: var(--font-size-lg);
 	}
 }
