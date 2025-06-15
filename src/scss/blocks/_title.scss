@@ -1,0 +1,14 @@
+@use './../base/mixins' as *;
+
+.title {
+	font-family: var(--font-accent);
+	font-weight: var(--font-weight-accent);
+}
+
+.section-title {
+	font-size: var(--font-size-xl);
+
+	@include mobile-s {
+		font-size: var(--font-size-md);
+	}
+}

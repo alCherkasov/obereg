@@ -1,0 +1,15 @@
+@use './../base/mixins' as *;
+
+.products {
+	overflow-x: hidden;
+}
+
+.products__inner {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-md);
+
+	@include mobile {
+		gap: var(--spacing-sm);
+	}
+}

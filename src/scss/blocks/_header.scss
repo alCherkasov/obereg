@@ -1,14 +1,8 @@
 @use './../base/mixins' as *;
 
 .header {
-	margin-bottom: 80px;
-
 	font-family: var(--font-accent);
 	font-weight: var(--font-weight-accent);
-
-	@include mobile {
-		margin-bottom: var(--spacing-md);
-	}
 }
 
 .header__inner {

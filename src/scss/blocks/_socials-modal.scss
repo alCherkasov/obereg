@@ -19,10 +19,27 @@
 }
 
 .socials-modal__content {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-xl);
 	max-width: 480px;
 	max-height: 480px;
-	padding: var(--spacing-sm);
+	padding: 20px 20px 40px 20px;
 
 	border-radius: var(--border-rad-md);
 	background-color: var(--color-light-gray);
+	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.socials-modal__title {
+	font-size: var(--font-size-sm);
+}
+
+.socials-modal__controls {
+	display: flex;
+	gap: var(--spacing-xs);
+
+	a {
+		font-weight: var(--font-weight-main);
+	}
 }

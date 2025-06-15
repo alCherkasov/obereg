@@ -1,4 +1,12 @@
+@use './../base/mixins' as *;
+
 .main {
 	display: grid;
 	gap: var(--spacing-xxl);
+	padding: var(--spacing-xl) 0 var(--spacing-xxl);
+
+	@include mobile {
+		gap: var(--spacing-xl);
+		padding: var(--spacing-md) 0 var(--spacing-xxl);
+	}
 }

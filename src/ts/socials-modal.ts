@@ -2,7 +2,7 @@ export function SocialsModal() {
 	const button: HTMLElement | null = document.getElementById('hero-button')
 	const modal: HTMLElement | null = document.getElementById('socials-modal')
 	const body: HTMLElement | null = document.querySelector('body')
-
+	
 	button?.addEventListener('click', (e) => {
 		e.stopPropagation()
 		modal?.classList.toggle('socials-modal--open')

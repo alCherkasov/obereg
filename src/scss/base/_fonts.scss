@@ -1,6 +1,6 @@
 @font-face {
 	font-family: 'Montserrat';
-	src: url('./../../../public/fonts/Montserrat-SemiBold.woff2') format('woff2');
+	src: url('/fonts/Montserrat-SemiBold.woff2') format('woff2');
 	font-weight: 600;
 	font-style: normal;
 	font-display: swap;
@@ -8,23 +8,23 @@
 
 @font-face {
 	font-family: 'Montserrat';
-	src: url('./../../../public/fonts/Montserrat-Regular.woff2') format('woff2');
+	src: url('/fonts/Montserrat-Regular.woff2') format('woff2');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'Inter 28pt';
-	src: url('./../../../public/fonts/Inter28pt-Regular.woff2') format('woff2');
+	font-family: 'Inter';
+	src: url('/fonts/Inter28pt-Regular.woff2') format('woff2');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'Inter 28pt';
-	src: url('./../../../public/fonts/Inter28pt-SemiBold.woff2') format('woff2');
+	font-family: 'Inter';
+	src: url('/fonts/Inter28pt-SemiBold.woff2') format('woff2');
 	font-weight: 600;
 	font-style: normal;
 	font-display: swap;

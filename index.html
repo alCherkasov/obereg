@@ -4,7 +4,6 @@
 		<meta charset="UTF-8" />
 		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script type="module" src="/src/ts/main.ts" defer></script>
 		<link rel="stylesheet" href="./src/scss/main.scss" />
 		<title>Vite + TS</title>
 	</head>
@@ -35,17 +34,17 @@
 					</div>
 					<nav class="header__controls">
 						<a href="tel:+79182031229" class="phone-button">
-							<img
-								src="./public/icons/phone-icon.svg"
-								alt="Кнопка: позвонить нам"
-							/>
+							<svg class="phone-icon">
+								<use xlink:href="sprite.svg#phone"></use>
+							</svg>
 						</a>
 						<button
 							class="burger"
 							id="burger"
 							aria-label="Кнопка: открыть меню"
+							aria-expanded="false"
 						>
-							<div class="burger__line"></div>
+							<span class="burger__line"></span>
 						</button>
 					</nav>
 				</div>
@@ -71,23 +70,17 @@
 								Написать нам
 							</button>
 						</div>
-						<picture class="hero__img" width="580" height="480">
+						<picture class="hero__img">
 							<source
-								srcset="
-									./public/img/hero/hero.webp    1x,
-									./public/img/hero/hero@2x.webp 2x
-								"
+								srcset="/img/hero/hero.webp 1x, /img/hero/hero@2x.webp 2x"
 								type="image/webp"
 							/>
 							<source
-								srcset="
-									./public/img/hero/hero.jpg    1x,
-									./public/img/hero/hero@2x.jpg 2x
-								"
-								type="image/webp"
+								srcset="/img/hero/hero.jpg 1x, /img/hero/hero@2x.jpg 2x"
+								type="image/jpg"
 							/>
 							<img
-								src="./public/img/hero/hero.jpg"
+								src="/img/hero/hero.jpg"
 								alt="Каркасный дом"
 								loading="lazy"
 							/>
@@ -95,12 +88,253 @@
 					</div>
 				</div>
 			</section>
+			<section class="products">
+				<div class="container">
+					<div class="products__inner">
+						<h2 class="title section-title">Мы строим</h2>
+						<div class="swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<a class="product-card__wrapper">
+										<article class="product-card" tabindex="0">
+											<div class="product-card__overlay"></div>
+											<picture class="product-card__img">
+												<source
+													srcset="
+														/img/products/modulniy-dom.webp 1x,
+														/img/products/modulniy-dom.webp 2x
+													"
+													type="image/webp"
+												/>
+												<source
+													srcset="
+														/img/products/modulniy-dom.jpg 1x,
+														/img/products/modulniy-dom.jpg 2x
+													"
+													type="image/webp"
+												/>
+												<img
+													src="/img/products/modulniy-dom.jpg"
+													alt="Перейти в раздел: Каркасные дома"
+												/>
+											</picture>
+											<header class="product-card__header">
+												<h3 class="product-card__title title">
+													Модульные<br />дома
+												</h3>
+												<p class="product-card__fake-link">Подробнее</p>
+											</header>
+											<div class="product-card__body">
+												<div class="badge badge--primary">
+													<svg class="lightning-icon">
+														<use xlink:href="sprite.svg#lightning"></use>
+													</svg>
+													Хит продаж
+												</div>
+											</div>
+										</article>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="product-card__wrapper">
+										<article class="product-card" tabindex="0">
+											<div class="product-card__overlay"></div>
+											<picture class="product-card__img">
+												<source
+													srcset="
+														/img/products/karkasniy-dom.webp 1x,
+														/img/products/karkasniy-dom.webp 2x
+													"
+													type="image/webp"
+												/>
+												<source
+													srcset="
+														/img/products/karkasniy-dom.jpg 1x,
+														/img/products/karkasniy-dom.jpg 2x
+													"
+													type="image/webp"
+												/>
+												<img
+													src="/img/products/karkasniy-dom.jpg"
+													alt="Перейти в раздел: Каркасные дома"
+												/>
+											</picture>
+											<header class="product-card__header">
+												<h3 class="product-card__title title">
+													Каркасные<br />дома
+												</h3>
+												<p class="product-card__fake-link">Подробнее</p>
+											</header>
+											<div class="product-card__body"></div>
+										</article>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="product-card__wrapper">
+										<article class="product-card" tabindex="0">
+											<div class="product-card__overlay"></div>
+											<picture class="product-card__img">
+												<source
+													srcset="
+														/img/products/glamping.webp 1x,
+														/img/products/glamping.webp 2x
+													"
+													type="image/webp"
+												/>
+												<source
+													srcset="
+														/img/products/glamping.jpg 1x,
+														/img/products/glamping.jpg 2x
+													"
+													type="image/webp"
+												/>
+												<img
+													src="/img/products/glamping.jpg"
+													alt="Перейти в раздел: Глэмпинг"
+												/>
+											</picture>
+											<header class="product-card__header">
+												<h3 class="product-card__title title">Глэмпинг</h3>
+												<p class="product-card__fake-link">Подробнее</p>
+											</header>
+											<div class="product-card__body">
+												<div class="badge badge--purple">Бизнес решение</div>
+											</div>
+										</article>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="product-card__wrapper">
+										<article class="product-card" tabindex="0">
+											<div class="product-card__overlay"></div>
+											<picture class="product-card__img">
+												<source
+													srcset="
+														/img/products/banya.webp 1x,
+														/img/products/banya.webp 2x
+													"
+													type="image/webp"
+												/>
+												<source
+													srcset="
+														/img/products/banya.jpg 1x,
+														/img/products/banya.jpg 2x
+													"
+													type="image/webp"
+												/>
+												<img
+													src="/img/products/banya.jpg"
+													alt="Перейти в раздел: Бани"
+												/>
+											</picture>
+											<header class="product-card__header">
+												<h3 class="product-card__title title">Бани</h3>
+												<p class="product-card__fake-link">Подробнее</p>
+											</header>
+											<div class="product-card__body"></div>
+										</article>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="product-card__wrapper">
+										<article class="product-card" tabindex="0">
+											<div class="product-card__overlay"></div>
+											<picture class="product-card__img">
+												<source
+													srcset="
+														/img/products/modulniy-dom.webp 1x,
+														/img/products/modulniy-dom.webp 2x
+													"
+													type="image/webp"
+												/>
+												<source
+													srcset="
+														/img/products/modulniy-dom.jpg 1x,
+														/img/products/modulniy-dom.jpg 2x
+													"
+													type="image/webp"
+												/>
+												<img
+													src="/img/products/modulniy-dom.jpg"
+													alt="Перейти в раздел: Каркасные дома"
+												/>
+											</picture>
+											<header class="product-card__header">
+												<h3 class="product-card__title title">
+													Модульные<br />дома
+												</h3>
+												<p class="product-card__fake-link">Подробнее</p>
+											</header>
+											<div class="product-card__body">
+												<div class="badge badge--primary">
+													<svg class="lightning-icon">
+														<use xlink:href="sprite.svg#lightning"></use>
+													</svg>
+													Хит продаж
+												</div>
+											</div>
+										</article>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="product-card__wrapper">
+										<article class="product-card" tabindex="0">
+											<div class="product-card__overlay"></div>
+											<picture class="product-card__img">
+												<source
+													srcset="
+														/img/products/karkasniy-dom.webp 1x,
+														/img/products/karkasniy-dom.webp 2x
+													"
+													type="image/webp"
+												/>
+												<source
+													srcset="
+														/img/products/karkasniy-dom.jpg 1x,
+														/img/products/karkasniy-dom.jpg 2x
+													"
+													type="image/webp"
+												/>
+												<img
+													src="/img/products/karkasniy-dom.jpg"
+													alt="Перейти в раздел: Каркасные дома"
+												/>
+											</picture>
+											<header class="product-card__header">
+												<h3 class="product-card__title title">
+													Каркасные<br />дома
+												</h3>
+												<p class="product-card__fake-link">Подробнее</p>
+											</header>
+											<div class="product-card__body"></div>
+										</article>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
-		<div class="socials-modal" id="socials-modal">
+		<div class="socials-modal" id="socials-modal" role="dialog">
 			<div class="socials-modal__content">
-				<a href="" class="button button--whatsapp">Whatsapp</a>
-				<a href="" class="button button--telegram">Telegram</a>
+				<h2 class="socials-modal__title title">Куда вы хотите написать?</h2>
+				<div class="socials-modal__controls">
+					<a href="" class="button button--whatsapp">
+						<svg class="whatsapp-icon">
+							<use xlink:href="sprite.svg#whatsapp"></use>
+						</svg>
+						WhatsApp
+					</a>
+					<a href="" class="button button--telegram">
+						<svg class="telegram-icon">
+							<use xlink:href="sprite.svg#telegram"></use>
+						</svg>
+						Telegram
+					</a>
+				</div>
 			</div>
 		</div>
+		<script type="module" src="/src/ts/main.ts"></script>
 	</body>
 </html>

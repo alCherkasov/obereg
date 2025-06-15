@@ -1,0 +1,30 @@
+@use './../base/mixins' as *;
+
+.whatsapp-icon {
+	fill: var(--color-white);
+	width: 18px;
+	height: 18px;
+}
+
+.telegram-icon {
+	fill: var(--color-white);
+	width: 24px;
+	height: 24px;
+}
+
+.phone-icon {
+	fill: var(--color-black);
+	width: 16px;
+	height: 16px;
+}
+
+.lightning-icon {
+	width: 12px;
+	height: 18px;
+	fill: var(--color-black);
+
+	@include mobile-s {
+		width: 8px;
+		height: 12px;
+	}
+}

@@ -17,9 +17,11 @@
 	align-items: start;
 	flex: 1;
 	gap: var(--spacing-md);
+	min-height: 480px;
 
 	@include tablet {
 		gap: var(--spacing-sm);
+		min-height: auto;
 	}
 
 	@include mobile {
@@ -72,7 +74,7 @@
 .hero__img {
 	overflow: hidden;
 	max-width: 580px;
-	max-height: 480px;
+	max-height: auto;
 
 	border-radius: var(--border-rad-lg);
 	background-color: var(--color-light-gray);
@@ -100,13 +102,3 @@
 		border-radius: var(--border-rad-sm);
 	}
 }
-
-// @media (max-width: 1110px) {
-// 	.hero__title {
-// 		font-size: var(--font-size-xl);
-// 	}
-
-// 	.hero__description {
-// 		font-size: var(--font-size-sm);
-// 	}
-// }

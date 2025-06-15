@@ -1,0 +1,27 @@
+@use './../base/mixins' as *;
+
+.badge {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+	padding: 10px 16px;
+
+	font-family: var(--font--accent);
+	font-size: var(--font-size-sm);
+	font-weight: var(--font-weight-accent);
+
+	border-radius: var(--border-rad-md);
+
+	&--primary {
+		background-color: var(--color-primary);
+	}
+
+	&--purple {
+		background-color: var(--color-secondary);
+	}
+
+	@include mobile-s {
+		font-size: var(--font-size-xxs);
+	}
+}

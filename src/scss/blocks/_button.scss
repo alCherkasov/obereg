@@ -1,7 +1,10 @@
 @use './../base/mixins' as *;
 
 .button {
-	display: inline-block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
 	padding: var(--spacing-sm);
 
 	font-family: var(--font-accent);
@@ -28,6 +31,10 @@
 		background-color: #2cb742;
 
 		&:hover {
+			background-color: #2fc145;
+		}
+
+		&:focus-visible {
 			background-color: #29ab3d;
 		}
 	}
@@ -35,6 +42,10 @@
 		background-color: #27a7e7;
 
 		&:hover {
+			background-color: #2cb7fd;
+		}
+
+		&:focus-visible {
 			background-color: #259dd8;
 		}
 	}
