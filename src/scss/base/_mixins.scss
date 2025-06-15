@@ -1,6 +1,7 @@
 $tablet: 1120.98px;
 $mobile: 867.98px;
 $mobile-s: 480.98px;
+$mobile-vs: 339.98px;
 
 @mixin tablet {
 	@media (max-width: $tablet) {
@@ -16,6 +17,12 @@ $mobile-s: 480.98px;
 
 @mixin mobile-s {
 	@media (max-width: $mobile-s) {
+		@content;
+	}
+}
+
+@mixin mobile-vs {
+	@media (max-width: $mobile-vs) {
 		@content;
 	}
 }

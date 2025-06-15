@@ -3,9 +3,12 @@ import 'swiper/css'
 
 export function productsCarousel() {
 	new Swiper('.swiper', {
+		loop: true,
+		autoplay: {
+			delay: 3000
+		},
 		spaceBetween: 16,
 		slidesPerView: 2,
-		loop: true,
 		breakpoints: {
 			868: {
 				spaceBetween: 20,
