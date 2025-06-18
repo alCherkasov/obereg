@@ -24,7 +24,7 @@
 	min-height: 480px;
 
 	@include tablet {
-		gap: var(--spacing-sm);
+		gap: var(--spacing-md);
 		min-height: auto;
 	}
 
@@ -36,6 +36,7 @@
 .hero__title {
 	font-size: var(--font-size-xxl);
 	font-weight: var(--font-weight-accent);
+	text-wrap: balance;
 
 	@include tablet {
 		font-size: var(--font-size-xl);
@@ -54,12 +55,14 @@
 	max-width: 420px;
 
 	font-size: var(--font-size-md);
+	text-wrap: balance;
 
 	@include tablet {
-		font-size: var(--font-size-sm);
+		font-size: 20px;
 	}
 
 	@include mobile {
+		font-size: var(--font-size-sm);
 		order: 3;
 	}
 }
@@ -92,7 +95,6 @@
 
 	@include tablet {
 		max-width: 480px;
-		max-height: 380px;
 	}
 
 	@include mobile {

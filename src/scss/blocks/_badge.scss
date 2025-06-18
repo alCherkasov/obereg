@@ -21,6 +21,10 @@
 		background-color: var(--color-secondary);
 	}
 
+	@include mobile {
+		font-size: var(--font-size-xs);
+	}
+
 	@include mobile-s {
 		font-size: var(--font-size-xxs);
 	}

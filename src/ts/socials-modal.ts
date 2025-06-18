@@ -1,12 +1,15 @@
-export function SocialsModal() {
-	const button: HTMLElement | null = document.getElementById('hero-button')
+export function socialsModal() {
+	const buttons: NodeListOf<HTMLButtonElement> | null = document.querySelectorAll('.open-modal-button')
 	const modal: HTMLElement | null = document.getElementById('socials-modal')
 	const body: HTMLElement | null = document.querySelector('body')
-	
-	button?.addEventListener('click', (e) => {
-		e.stopPropagation()
-		modal?.classList.toggle('socials-modal--open')
+
+	buttons.forEach(button => {
+			button?.addEventListener('click', (e) => {
+			e.stopPropagation()
+			modal?.classList.toggle('socials-modal--open')
+		})
 	})
+	
 
 	body?.addEventListener('click', (e) => {
 		if (!modal?.classList.contains('socials-modal--open')) return
@@ -14,7 +17,7 @@ export function SocialsModal() {
 		const target = e.target as Node
 		console.log(target)
 
-		if (!modal.contains(target) && target !== button) {
+		if (!modal.contains(target)) {
 			modal.classList.remove('socials-modal--open')
 		}
 	})

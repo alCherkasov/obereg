@@ -4,7 +4,8 @@
 	display: block;
 	width: 100%;
 	height: auto;
-	&:hover {
+
+	@include hover {
 		scale: 0.99;
 	}
 }
@@ -26,7 +27,7 @@
 		scale: 0.98;
 	}
 
-	@include mobile-s {
+	@include mobile {
 		border-radius: var(--border-rad-md);
 	}
 }
@@ -73,6 +74,10 @@
 	flex-direction: column;
 	gap: var(--spacing-sm);
 
+	@include mobile {
+		top: 20px;
+	}
+
 	@include mobile-s {
 		top: 10px;
 		left: 10px;
@@ -83,6 +88,10 @@
 .product-card__title {
 	font-size: var(--font-size-lg);
 	color: var(--color-white);
+
+	@include mobile {
+		font-size: var(--font-size-md);
+	}
 
 	@include mobile-s {
 		font-size: var(--font-size-sm);
@@ -106,6 +115,10 @@
 	left: 20px;
 	bottom: 40px;
 	z-index: 12;
+
+	@include mobile {
+		bottom: 20px;
+	}
 
 	@include mobile-s {
 		left: 10px;

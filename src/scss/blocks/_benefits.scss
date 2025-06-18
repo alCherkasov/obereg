@@ -23,6 +23,8 @@
 		min-height: 480px;
 		padding: 40px;
 		align-items: start;
+
+		border-radius: var(--border-rad-md);
 	}
 
 	@include mobile-s {

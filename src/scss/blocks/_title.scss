@@ -8,7 +8,7 @@
 .section-title {
 	font-size: var(--font-size-xl);
 
-	@include mobile-s {
-		font-size: var(--font-size-md);
+	@include mobile {
+		font-size: var(--font-size-lg);
 	}
 }

@@ -1,0 +1,33 @@
+@use './../base/mixins' as *;
+
+.gallery {
+	position: relative;
+	overflow-x: hidden;
+}
+
+.gallery__inner {
+	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-md);
+
+	@include mobile {
+		gap: var(--spacing-sm);
+	}
+}
+
+.gallery__img {
+	img {
+		object-fit: cover;
+		aspect-ratio: 4/3;
+		border-radius: var(--border-rad-lg);
+	}
+
+	@include mobile {
+		img {
+			width: 100%;
+			height: 100%;
+			border-radius: var(--border-rad-md);
+		}
+	}
+}

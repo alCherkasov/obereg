@@ -1,4 +1,5 @@
 @use './../base/mixins' as *;
+@use './../base/animations' as *;
 
 .button {
 	display: flex;
@@ -15,11 +16,12 @@
 	border-radius: var(--border-rad-sm);
 	background-color: var(--color-black);
 
-	&:hover {
+	@include hover {
 		background-color: var(--color-black-hover);
 	}
 
 	&:active {
+		transform: scale(0.95);
 		background-color: var(--color-black-active);
 	}
 

@@ -28,24 +28,33 @@
 	gap: 64px;
 
 	@include tablet {
-		gap: 32px;
+		gap: 24px;
 	}
 }
 
 .header__logo {
-	font-size: var(--font-size-xl);
-	font-weight: 700;
+	display: flex;
+	img {
+		width: 200px;
+	}
 
 	@include tablet {
-		font-size: var(--font-size-lg);
+		img {
+			flex-shrink: 1;
+			max-width: 156px;
+		}
 	}
 
 	@include mobile {
-		font-size: var(--font-size-lg);
+		img {
+			width: 156px;
+		}
 	}
 
 	&--small {
-		font-size: var(--font-size-lg);
+		img {
+			width: 156px;
+		}
 	}
 }
 
@@ -93,7 +102,7 @@
 .header__nav-link {
 	padding: 10px 6px;
 
-	&:hover {
+	@include hover {
 		color: var(--color-black-hover);
 		background-color: var(--color-light-gray);
 		border-radius: 2px;
@@ -109,7 +118,7 @@
 	text-decoration: underline;
 
 	@include tablet {
-		font-size: 20px;
+		font-size: 18px;
 	}
 
 	@include mobile {

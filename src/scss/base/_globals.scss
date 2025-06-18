@@ -1,5 +1,7 @@
 * {
 	transition: var(--transition);
+	-webkit-tap-highlight-color: transparent;
+	scroll-padding-top: 100px;
 }
 
 body {

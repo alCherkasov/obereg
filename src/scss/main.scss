@@ -4,6 +4,7 @@
 @use './base/globals';
 @use './base/mixins';
 @use './base/utils';
+@use './base/animations';
 
 @use './blocks/main';
 @use './blocks/button';
@@ -20,3 +21,6 @@
 @use './blocks/swiper';
 @use './blocks/benefits';
 @use './blocks/process';
+@use './blocks/contacts';
+@use './blocks/gallery';
+@use './blocks/footer';

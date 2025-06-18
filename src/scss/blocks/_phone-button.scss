@@ -1,3 +1,6 @@
+@use './../base/animations' as *;
+@use './../base/mixins' as *;
+
 .phone-button {
 	width: 32px;
 	height: 32px;
@@ -5,5 +8,43 @@
 	align-items: center;
 	justify-content: center;
 	border-radius: 6px;
-	background-color: var(--color-light-gray);
+	background-color: var(--color-black);
+
+	svg {
+		fill: var(--color-white);
+	}
+
+	&--fixed {
+		position: fixed;
+		right: 32px;
+		bottom: 100px;
+		z-index: 1501;
+
+		display: none;
+
+		width: 64px;
+		height: 64px;
+
+		background-color: #3aca2d;
+		box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+
+		svg {
+			width: 32px;
+			height: 32px;
+		}
+
+		&:active {
+			transform: scale(0.95);
+			background-color: #36be2a;
+		}
+
+		@include mobile {
+			display: flex;
+			animation: subtle-glow 3s infinite;
+		}
+
+		@include mobile-vs {
+			right: 16px;
+		}
+	}
 }
